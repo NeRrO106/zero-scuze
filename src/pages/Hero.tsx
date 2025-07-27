@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
     <div className="pl-64 min-h-screen bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 flex items-center justify-center px-4">
@@ -12,12 +14,16 @@ function Hero() {
           Pentru o experiență completă, autentifică-te sau creează un cont.
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
-          <button className="transition-all duration-300 focus:outline-none text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-semibold rounded-lg text-md px-6 py-2 shadow-lg dark:focus:ring-green-800">
-            Sign In
-          </button>
-          <button className="transition-all duration-300 focus:outline-none text-gray-900 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-semibold rounded-lg text-md px-6 py-2 shadow-lg dark:focus:ring-yellow-900">
-            Sign Up
-          </button>
+          <Link to="/login">
+            <button className="transition-all duration-300 focus:outline-none text-white bg-green-600 hover:bg-green-700 focus:ring-4 focus:ring-green-300 font-semibold rounded-lg text-md px-6 py-2 shadow-lg dark:focus:ring-green-800">
+              Sign In
+            </button>
+          </Link>
+          <Link to="/register">
+            <button className="transition-all duration-300 focus:outline-none text-gray-900 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-semibold rounded-lg text-md px-6 py-2 shadow-lg dark:focus:ring-yellow-900">
+              Sign Up
+            </button>
+          </Link>
           <button
             className="transition-all duration-300 focus:outline-none text-gray-900 bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-semibold rounded-lg text-md px-6 py-2 shadow-lg dark:focus:ring-yellow-900"
             onClick={() => localStorage.setItem("token", "abc123")}

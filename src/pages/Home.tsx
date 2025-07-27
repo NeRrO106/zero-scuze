@@ -7,6 +7,12 @@ function Home() {
       <p className="text-lg md:text-xl font-light text-gray-900 dark:text-white">
         Welcome to the home page of Zero Scuze!
       </p>
+      <button
+        onClick={() => localStorage.removeItem("token")}
+        className="mt-4 transition-all duration-300 focus:outline-none text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 font-semibold rounded-lg text-md px-6 py-2 shadow-lg dark:focus:ring-blue-800"
+      >
+        LogOut
+      </button>
     </div>
   );
 }
